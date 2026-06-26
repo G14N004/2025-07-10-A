@@ -29,6 +29,7 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         self._ddcategory = ft.Dropdown(label="Category", width=200)
+        self._controller.fillddcategory()
 
         self._dp1 = ft.DatePicker(
             on_change=lambda e: print(f"Giorno selezionato: {self._dp1.value}"),
@@ -63,6 +64,7 @@ class View(ft.UserControl):
         self._txtInLun = ft.TextField(label="Lunghezza cammino", width=120)
         self._ddProdStart = ft.Dropdown(label="Start product", width=350)
         self._ddProdEnd = ft.Dropdown(label="End product", width=350)
+
 
         self._btnCercaCammino = ft.ElevatedButton(text="Cerca ",
                                                   on_click=self._controller.handleCercaCammino, width=120)
